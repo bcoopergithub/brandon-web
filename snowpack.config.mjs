@@ -1,7 +1,9 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
   mount: {
-    /* ... */
+    // directory name: 'build directory'
+    public: '/',
+    src: '/dist',
   },
   plugins: [
     /* ... */
@@ -18,6 +20,8 @@ export default {
     /* ... */
   },
   devOptions: {
+    open: 'none',
+    knownEntrypoints:['has-symbols','react-transition-group/Transition'],
     /* ... */
   },
   buildOptions: {

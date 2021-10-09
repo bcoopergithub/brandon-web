@@ -5,6 +5,17 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },
   "devDependencies": {
-    "snowpack": "^3.3.7"
+    "snowpack": "https://gitpkg.now.sh/gpascale/snowpack/snowpack?cjs-require-fix-pkg"
+  },
+  "dependencies": {
+    "@welldone-software/why-did-you-render": "^6.2.1",
+    "axios": "^0.19.2",
+    "faker": "^4.1.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
   }
 }
