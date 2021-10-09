@@ -26,3 +26,6 @@ No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
 
 ./public/* => mysite.com/*
 ./src/*    => mysite.com/_dist/*
+
+
+aaa
