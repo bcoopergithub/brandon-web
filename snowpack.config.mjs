@@ -6,7 +6,7 @@ export default {
     src: '/dist',
   },
   plugins: [
-    /* ... */
+    '@snowpack/plugin-postcss',
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -20,6 +20,7 @@ export default {
     /* ... */
   },
   devOptions: {
+    tailwindConfig: './tailwind.config.js',
     open: 'none',
     knownEntrypoints:['has-symbols','react-transition-group/Transition'],
     /* ... */
