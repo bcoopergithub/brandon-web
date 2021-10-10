@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import '../css/home.css'
-import Background from '../img/littlebear.jpg'
+import Background from '../img/kuma.jpg'
 import Countdown from 'react-countdown';
 
 
@@ -35,11 +35,27 @@ function App() {
     } else {
       // Render a countdown
       return (
-        <span>
-          <h1>
-          {days}:{hours}:{minutes}:{seconds}
-          </h1>
-        </span>
+        <>
+                <div class="countdown-timer flex flex-row justify-around ...">
+                    <div class="p-16 rounded-3xl section">
+                        <div class="date">{days}</div>
+                        <div class="text">Days</div>
+                    </div>
+                    <div class="p-16 rounded-3xl section">
+                        <div class="date">{hours}</div>
+                        <div class="text">Hours</div>
+                    </div>
+                    <div class="p-16 rounded-3xl section ...">
+                        <div class="date">{minutes}</div>
+                        <div class="text">Minutes</div>
+                    </div>
+                    <div class="p-16 rounded-3xl section ... ">
+                        <div class="date">{seconds}</div>
+                        <div class="text">Seconds</div>
+                    </div>
+                </div>
+      </>
+        
       );
     }
   };
@@ -53,7 +69,7 @@ function App() {
   return (
 
     <div style= {{backgroundImage: `url(${Background})`}}className="background">
-
+    <div className = "content">
       <header className="App-header">
 
         {/* <p>
@@ -61,8 +77,11 @@ function App() {
         </p> */}
 
         <div><h1>Welcome to Little Brandon 's World </h1></div>
-        <Countdown date={new Date('2021/11/12 8:00')} renderer={renderer}/>,
+        <Countdown date={new Date('2021/11/12 8:00')} renderer={renderer}/>
       </header>
+      </div>
+
+
       {/* <div>
       <ul className="divide-y divide-gray-200">
         {people.map((person) => (

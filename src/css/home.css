@@ -12,6 +12,18 @@ body {
     font-family: sans-serif;
   }
 
+.content{
+    width:70%;
+    padding:5rem
+
+}
+
+.App-header {
+    width:100%;
+    font-size: 5rem;
+    text-align: center;
+}
+
 .background {
     width:100%;
     background-image: url("../img/littlebear.jpg");
@@ -21,3 +33,37 @@ body {
     background-size: cover;
 
 }
+
+.countdown-timer {
+    text-align: center;
+    color:#000; 
+    font-size:1.5em; 
+    margin:3rem 3rem;
+
+
+
+} 
+
+.countdown-timer .section {
+    text-align: center;
+    justify-content: space-around;
+    width:auto;
+    background-color: white;
+    
+    
+
+    
+}
+
+.date {
+    color:#000000; 
+    font-size:5rem; 
+    font-weight:bolder;
+}
+
+.text {
+    font-size: 3rem; 
+    color:rgb(0, 0, 0); 
+    margin-top:-22px;
+}
+
