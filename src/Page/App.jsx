@@ -44,22 +44,23 @@ function App() {
                 {' '}
             </div>
             <div className="w-full h-full flex flex-col justify-start relative lg:justify-start">
-                <div className="absolute  flex flex-col w-full 2xl:w-4/6 xl:w-3.5/6 lg:w-3/6 md:m-4 text-center ...">
+                <div className="entire-content w-full h-full relative  flex flex-col  2xl:w-4/6 xl:w-3.5/6 lg:w-3/6 md:m-4 text-center ...">
                     <div className="header-container my-4 relative App-header">
-                        <div className="my-4 2xl:text-6xl xl:text-4xl lg:text-4xl md:2xl text-center">
-                            <p>Welcome to Little Brandon 's World</p>
+                        <div className="welcome-text my-4 2xl:text-6xl xl:text-4xl lg:text-4xl md:2xl text-center">
+                            <p >Welcome to Little Brandon 's World</p>
                         </div>
-                        <div className="nav flex flex-row justify-around ">
+                        <div className="top-nav flex flex-row justify-around text-lg 2xl:text-3xl">
                             <div>About </div>
                             <div>Alums</div>
                             <div>Blog</div>
                             <div>Subscribe</div>
                         </div>
                     </div>
-                    <div className="body-container w-full h-full relative flex flex-col content-center justify-around">
-                        <div>Time to little Brandon to be born is : </div>
-                        <br />
-                        <Countdown date={new Date('2021/11/12 8:00')} renderer={CountdownTimer} />
+                    <div className="body-container w-full h-full relative grid grid-rows-3">
+                    <Countdown date={new Date('2021/11/12 8:00')} renderer={CountdownTimer} />
+                        <div className="countdown-title flex flex-col justify-center text-3xl "><p>Little Brandon is Looking Forward </p></div>
+                       
+                      
                     </div>
                 </div>
 

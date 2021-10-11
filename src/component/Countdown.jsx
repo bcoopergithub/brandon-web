@@ -9,8 +9,8 @@ const Countdown = ({ days, hours, minutes, seconds, completed }) => {
       // Render a countdown
       return (
         <>
-                <div className="w-full h-full countdown-timer flex  flex-row justify-around  ...">
-                    <div className="flex flex-col rounded-2xl section shadow-2xl ...">
+                <div className="text-base xl:text-8xl w-full countdown-timer flex  flex-row justify-around  ...">
+                    <div className=" flex flex-col rounded-2xl section shadow-2xl h-auto...">
                         <div className="date">{days}</div>
                         <div className="text">Days</div>
                     </div>
