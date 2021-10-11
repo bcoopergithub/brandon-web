@@ -1,69 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-html {
-    margin:0;
-    padding:0;
-    height:100vh
-}
-
-body {
-    font-family: sans-serif;
-  }
 
 .content{
     width:70%;
-    padding:5rem
-
 }
 
 .App-header {
     width:100%;
-    font-size: 5rem;
     text-align: center;
 }
 
 .background {
     width:100%;
-    background-image: url("../img/littlebear.jpg");
-    height: 100vh;
+  
+    /* background-color:#b0c4de; */
+    height: 100vh;  
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+ 
 
 }
 
 .countdown-timer {
     text-align: center;
     color:#000; 
-    font-size:1.5em; 
-    margin:3rem 3rem;
+    
+ 
 
 
 
 } 
 
 .countdown-timer .section {
-    text-align: center;
-    justify-content: space-around;
-    width:auto;
-    background-color: white;
-    
+ 
+    background-color:white;
+    padding:10px
     
 
     
 }
 
 .date {
-    color:#000000; 
-    font-size:5rem; 
-    font-weight:bolder;
+
 }
 
 .text {
-    font-size: 3rem; 
-    color:rgb(0, 0, 0); 
-    margin-top:-22px;
-}
+ 
 
+}
+/* 
+@media only screen and (max-width: 600px) {
+    .background {
+        background-image: url("../img/littlebear.jpg");
+
+    }
+  } */
