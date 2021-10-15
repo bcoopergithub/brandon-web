@@ -1,13 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useHistory, Link } from 'react-router-dom';
+
 import isReact from 'is-react';
 import '../css/home.css';
 import Countdown from 'react-countdown';
-import background_desktop from '../img/kuma.jpg';
-import background_mobile from '../img/kuma-mobile.jpg';
 import CountdownTimer from '../component/Countdown';
+import Layout from '../component/Background';
 
-const App = () => {
+
+const WelcomePage = () => {
     // console.log(isReact.functionComponent(CountdownTimer))
+  let history = useHistory();
 
     const people = [
         {
@@ -40,32 +43,31 @@ const App = () => {
     // Return the App component.
     return (
         <>
-            <div style={{ backgroundImage: `url(${background_desktop})` }} className="w-full h-full bg-no-repeat bg-cover bg-right invisible sm:visible  absolute"></div>
-            <div style={{ backgroundImage: `url(${background_mobile})` }} className="w-full h-full bg-no-repeat bg-cover bg-right visible sm:invisible absolute ">
-                {' '}
-            </div>
+        <Layout></Layout>
             <div className="w-full h-full flex flex-col justify-start relative lg:justify-start">
-                <div className="entire-content w-full h-full relative  flex flex-col   lg:w-3/6 xl:w-4/6 2xl:w-4/6   md:my-5 px-0 md:px-6 xl:pr-36 text-center ...">
+                <div className="entire-content w-full h-full relative  flex flex-col   lg:w-3/6 xl:w-4/6 2xl:w-4/6   md:my-5 px-0 md:px-6 lg:px-0 xl:pr-36 2xl:pr-20 text-center ...">
                     <div className="header-container my-4 relative App-header">
-                        <div className="welcome-text my-4 2xl:text-6xl xl:text-4xl lg:text-4xl md:2xl text-center">
+                        <div className="welcome-text text-center my-4 md:2xl lg:text-2xl xl:text-4xl 2xl:text-5xl   ">
                             <p>Welcome to Little Brandon 's World</p>
                         </div>
                         <div className="top-nav flex flex-row justify-around text-lg 2xl:text-3xl">
-                            <div>About</div>
-                            <div>Albums</div>
-                            <div>Blog</div>
-                            <div>Subscribe</div>
+                        <Link to="/about">About</Link>
+                        <Link to="/about">Albums</Link>
+                        <Link to="/about">Blog</Link>
+                        <Link to="/about">Subscribe</Link>
+
                         </div>
                     </div>
                     <div className="body-container w-full h-full relative grid grid-rows-2">
                         <Countdown date={new Date('2021/11/12 8:00')} renderer={CountdownTimer} />
 
-                        <div className="countdown-title text-3xl ">
+                        <div className="greeting  self-center countdown-title text-3xl ">
                             <div>
-                                <p className="self-start">I'm looking forward to meeting you</p>
+                                <p className="text-lg lg:text-3xl self-start ">I'm looking forward to see ya... mate !</p>
                             </div>
+                            <br></br>
                             <div>
-                                <p className="self-center">Little Brandon</p>
+                                <p className="text-base lg:text-2xl self-end justify-items-end text-right">-- Little Brandon</p>
                             </div>
                         </div>
                     </div>
@@ -94,8 +96,9 @@ const App = () => {
 </div>
       </div> */}
             </div>
+          
         </>
     );
 };
 
-export default App;
+export default WelcomePage;

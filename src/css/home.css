@@ -1,3 +1,18 @@
+.kuma-logo {
+
+
+}
+
+.enter-button {
+background-color:#8D6E34;
+border:20px solid #6C552A,
+
+}
+
+.enter-button:hover{
+    background-color:#7D622F
+
+}
 .entire-content{
 
 
@@ -15,6 +30,7 @@
 
 .welcome-text {
     font-family: 'Encode Sans Expanded', sans-serif!important;
+    color:black
 }
 
 
@@ -45,80 +61,37 @@ font-family: 'Lato', sans-serif;
 .countdown-timer {
     text-align: center;
     color:#000; 
-    
-    
- 
-
-
-
 } 
 
 .countdown-timer .section {
- 
-    background-color:rgb(255,232,128);
-    
-    
-
     
 }
 
 
 
 
-.countdown-container  {
+.countdown-container {
     display:flex;
     flex-direction:column;
     justify-content:center;
-    position:relative
-
-    
- 
-	
+    position:relative;
+    align-items:center!important;
 		/* desired width */
 }
-.countdown-container :before {
-	content: "";
-	float: left;
-	padding-top: 100%;
-    display: inline-block;
-    display:flex;
-    flex-direction:column;
-    justify-content:center!important;
-    align-items:center!important;
-    align-content:center!important;
-    position:relative
-     	/* initial ratio of 1:1*/
-}
 
-.days :before, .hours :before, .minutes :before, .seconds :before {
-    display:flex;
-    flex-direction:column;
-    justify-content:center!important;
-    align-items:center!important;
-    align-content:center!important;
-  position:absolute!important;
-  vertical-align:middle!important
-
-
+.days , .hours , .minutes, .seconds {
+    background-color:rgb(255,232,128);
+    color:black;
+    font-weight:500
+  
+ 
 }
 
 span{
-    position:absolute;
-    top: 40%; bottom: 40%; left: 0; right: 0;
-    margin-left: auto;
-  margin-right: auto;
-    height:auto;
-    width:auto;
-    vertical-align:middle!important
-
+  
 }
 
-.wraper {
-    position:absolute;
-    
-  top: 39%; bottom: 0; left: 0; right: 0;
-  transform: translateY(-15%);
-  margin: auto;
-/* display:block!important; */
-vertical-align:middle!important
+.greeting {
+    font-weight:800;
+    color:#292314
 }

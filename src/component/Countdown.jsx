@@ -9,33 +9,33 @@ const CountdownTimer = ({ days, hours, minutes, seconds, completed }) => {
         // Render a countdown
         return (
             <>
-                <div class="text-lg sm:text-3xl md:text-4xl lg:text-2xl xl:text-3xl 2xl:text-5xl w-full countdown-timer grid grid-cols-4 gap-x-8 self-center ...">
-                    <div className="countdown-container p-0 rounded-2xl sm:rounded-2xl md:rounded-3xl section shadow-2xl ...">
-                        <div className="days">
+                <div className="px-1 sm:px-5 md:px-3 lg:pl-6 lg:pr-0 text-lg sm:text-3xl md:text-4xl lg:text-2xl xl:text-3xl 2xl:text-4xl w-full countdown-timer grid  grid-cols-4 justify-items-center self-center ...">
+                    <div className="justify-items-center days w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-28 lg:h-28 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 countdown-container p-0 rounded-2xl sm:rounded-2xl md:rounded-3xl shadow-2xl ...">
+                        <div className=" ">
                         <div className="wraper">
                             <div>{days}</div>
                             <div>Days</div>
                             </div>
                         </div>
                     </div>
-                    <div className="countdown-container p-0 rounded-2xl section shadow-2xl ...">
-                        <div className="hours">
+                    <div className="hours w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-28 lg:h-28 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 countdown-container p-0 rounded-2xl shadow-2xl ...">
+                        <div className=" ">
                         <div className="wraper">
                             <div>{hours}</div>
                             <div>Hours</div>
                             </div>
                         </div>
                     </div>
-                    <div className="countdown-container p-0 rounded-2xl section shadow-2xl ...">
-                        <div className="minutes">
+                    <div className="minutes w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-28 lg:h-28 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 countdown-container p-0 rounded-2xl shadow-2xl ...">
+                        <div className="">
                         <div className="wraper">
                             <div>{minutes}</div>
                             <div>Minutes</div>
                             </div>
                         </div>
                     </div>
-                    <div className="countdown-container p-0 rounded-2xl section shadow-2xl ...">
-                        <div className="seconds">
+                    <div className="seconds w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-28 lg:h-28 xl:w-40 xl:h-40 2xl:w-48 2xl:h-48 countdown-container p-0 rounded-2xl shadow-2xl ...">
+                        <div className="">
                           <div className="wraper">
                           <div>{seconds}</div>
                             <div>Seconds</div>
