@@ -19,7 +19,7 @@ const Qpage = (props) => {
     const [isAutheticated, setisAutheticated] = useState(false);
     const [date, setDate] = useState(new Date());
     const [failureNotification, setfailureNotification] = useState(true);
-    const [failureNotification_msg, setfailureNotification_msg] = useState("Case doesn't matter");
+    const [failureNotification_msg, setfailureNotification_msg] = useState("Intimacy Questions");
 
     const [dad_name, enter_dad_name] = useState('');
     const [mum_name, enter_mum_name] = useState('');
