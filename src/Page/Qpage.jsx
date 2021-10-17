@@ -131,7 +131,7 @@ getDefaultLocale
                             selected={date} onChange={(date) => setDate(date)} 
                             />
                             <div className="w-full flex justify-center my-8">
-                                <button className="enter-button place-items-center text-center w-full p-2 pl-5 pr-5 transition-colors duration-700 transform font-bold text-gray-100 text-lg rounded-lg focus:border-4">
+                                <button className="enter-button place-items-center text-center w-full p-2 pl-5 pr-5 transition-colors duration-700 transform font-bold text-gray-100 text-lg rounded-lg">
                                     enter
                                 </button>
                             </div>
