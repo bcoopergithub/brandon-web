@@ -25,9 +25,9 @@ const AppRouter = () => {
       {/* <Router history ={history}> */}
       <Router>
         <Switch>
-          <Route exact path='/aaa' render={() => <Qpage verify = {(value)=>setisAutheticated(value)}/>  } />
+          <Route exact path='/' render={() => <Qpage verify = {(value)=>setisAutheticated(value)}/>  } />
           <ProtectedRoute path='/welcome' component={WelcomePage} auth={isAutheticated} />
-          <Route path='/' component={About} auth={isAutheticated}/>
+          <ProtectedRoute path='/about' component={About} auth={isAutheticated}/>
           <ProtectedRoute path='/album' component={Journey} auth={isAutheticated}/>
           <ProtectedRoute path='/journey' component={Journey} auth={isAutheticated}/>
           <ProtectedRoute path='/subscribe' component={Journey} auth={isAutheticated}/>
