@@ -33,9 +33,9 @@ getDefaultLocale
     console.log(mum_name);
    
       console.log(date)
-      console.log(birthday)
-      console.log(date.toString().substring(0, 15));
-    console.log(birthday.toString().substring(0, 15));
+    //   console.log(birthday)
+    //   console.log(date.toString().substring(0, 15));
+    // console.log(birthday.toString().substring(0, 15));
 
     
     const color = 'black';
