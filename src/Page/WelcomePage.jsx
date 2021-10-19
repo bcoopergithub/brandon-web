@@ -35,9 +35,9 @@ const WelcomePage = () => {
                         </div>
                         <div className="top-nav flex flex-row justify-around text-lg 2xl:text-3xl">
                         <Link to="/about">About</Link>
-                        <Link to="/about">Albums</Link>
-                        <Link to="/about">Blog</Link>
-                        <Link to="/about">Subscribe</Link>
+                        <Link to="/albums">Albums</Link>
+                        <Link to="/blog">Blog</Link>
+                        <Link to="/subscribe">Subscribe</Link>
 
                         </div>
                     </div>
