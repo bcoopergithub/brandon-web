@@ -12,10 +12,13 @@ import kuma_logo from '../img/kuma-logo.png';
 const Qpage = (props) => {
     let history = useHistory();
 getDefaultLocale
-    const daddy_name = 'brandon';
+    const daddy_name1 = 'brandon';
+    const daddy_name2 = "chunk";
     const mommy_name1 = 'amy';
     const mommy_name2 = 'amiee';
-    const birthday = new Date('2021-11-12');
+    const mommy_name3 = "chunk's wife"
+    const birthday1 = new Date('2021-11-12');
+    const birthday2 = new Date('2021-11-19');
     const { verify } = props;
     const [isAutheticated, setisAutheticated] = useState(false);
     const [date, setDate] = useState("");
@@ -53,23 +56,24 @@ getDefaultLocale
     let bgColor;
     color === 'white' ? (bgColor = 'bg-blueGray-700') : (bgColor = 'bg-' + color + '-500');
     const getDate = date.toString().substring(0, 11)
-    const getBirthday =birthday.toString().substring(0, 11)
+    const getBirthday1 =birthday1.toString().substring(0, 11)
+    const getBirthday2 =birthday2.toString().substring(0, 11)
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             // const response = await axios.post(serverURL + '/login',user,{withCredentials:true});
             localStorage.clear();
             console.log(dad_name.toLowerCase());
-            console.log(daddy_name);
-            if (dad_name.toLowerCase() !== daddy_name) {
+            if (dad_name.toLowerCase() !== daddy_name1 || dad_name.toLowerCase() !== daddy_name2) {
                 setfailureNotification(true);
                 setfailureNotification_msg("hmm... Daddy's name?");
 
                 // console.log('now push to private page')
-            } else if (mum_name.toLowerCase() !== mommy_name1 && mum_name.toLowerCase() !== mommy_name2) {
+            } else if (mum_name.toLowerCase() !== mommy_name1 && mum_name.toLowerCase() !== mommy_name2 || mum_name.toLowerCase() !== mommy_name1) {
                 setfailureNotification(true);
                 setfailureNotification_msg("hmm... Mommy's name?");
-            } else if (getDate !== getBirthday) {
+            } else if (getDate !== getBirthday1 || getDate !== getBirthday2) {
                 setfailureNotification(true);
                 setfailureNotification_msg('Ahm... guess ?');
             } else {
