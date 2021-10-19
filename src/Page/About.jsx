@@ -12,7 +12,7 @@ function About(props) {
    <Layout></Layout>
    <div className="h-full flex justify-center content-center">
    <div className="flex flex-col justify-center">
-  <p className = "text-3xl text-center mb-3">Royal Woment Hospital</p>
+  <p className = "text-3xl text-center mb-3">Royal Women Hospital</p>
   <iframe
   width="800"
   height="650"
