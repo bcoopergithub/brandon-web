@@ -12,23 +12,6 @@ const WelcomePage = () => {
     // console.log(isReact.functionComponent(CountdownTimer))
   let history = useHistory();
 
-    const people = [
-        {
-            name: 'Calvin Hawkins',
-            email: 'calvin.hawkins@example.com',
-            image: 'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-        {
-            name: 'Kristen Ramos',
-            email: 'kristen.ramos@example.com',
-            image: 'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-        {
-            name: 'Ted Fox',
-            email: 'ted.fox@example.com',
-            image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-        },
-    ];
 
     // Create the count state.
     const [count, setCount] = useState(0);
@@ -36,10 +19,10 @@ const WelcomePage = () => {
 
     // const date = new Date('2022/06/22 18:00');
     // Update the count (+1 every second).
-    useEffect(() => {
-        const timer = setTimeout(() => setCount(count + 1), 1000);
-        return () => clearTimeout(timer);
-    }, [count, setCount]);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => setCount(count + 1), 1000);
+    //     return () => clearTimeout(timer);
+    // }, [count, setCount]);
     // Return the App component.
     return (
         <>
@@ -59,7 +42,7 @@ const WelcomePage = () => {
                         </div>
                     </div>
                     <div className="body-container w-full h-full relative grid grid-rows-2">
-                        <Countdown date={new Date('2021/11/12 8:00')} renderer={CountdownTimer} />
+                        <Countdown date={new Date('2021/11/12 11:00')} renderer={CountdownTimer} />
 
                         <div className="greeting  self-center countdown-title text-3xl ">
                             <div>

@@ -6,6 +6,8 @@ import WelcomePage from './Page/WelcomePage'
 import Qpage from './Page/Qpage'
 import ProtectedRoute from './Page/Protected'
 import About from './Page/About'
+import Journey from './Page/Journey'
+
 
 
 
@@ -23,9 +25,14 @@ const AppRouter = () => {
       {/* <Router history ={history}> */}
       <Router>
         <Switch>
-          <Route exact path='/' render={() => <Qpage verify = {(value)=>setisAutheticated(value)}/>  } />
+          <Route exact path='/aaa' render={() => <Qpage verify = {(value)=>setisAutheticated(value)}/>  } />
           <ProtectedRoute path='/welcome' component={WelcomePage} auth={isAutheticated} />
-          <ProtectedRoute path='/about' component={About} auth={isAutheticated}/>
+          <Route path='/' component={About} auth={isAutheticated}/>
+          <ProtectedRoute path='/album' component={Journey} auth={isAutheticated}/>
+          <ProtectedRoute path='/journey' component={Journey} auth={isAutheticated}/>
+          <ProtectedRoute path='/subscribe' component={Journey} auth={isAutheticated}/>
+
+
         </Switch>
       </Router>
     </div>
