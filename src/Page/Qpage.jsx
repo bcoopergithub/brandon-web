@@ -65,15 +65,20 @@ getDefaultLocale
             // const response = await axios.post(serverURL + '/login',user,{withCredentials:true});
             localStorage.clear();
             console.log(dad_name.toLowerCase());
-            if (dad_name.toLowerCase() !== daddy_name1 || dad_name.toLowerCase() !== daddy_name2) {
+            console.log(daddy_name1)
+            console.log(daddy_name2)
+            if (dad_name.toLowerCase() !== daddy_name1 && dad_name.toLowerCase() !== daddy_name2) {
+                console.log('dad name wrong')
                 setfailureNotification(true);
                 setfailureNotification_msg("hmm... Daddy's name?");
 
                 // console.log('now push to private page')
-            } else if (mum_name.toLowerCase() !== mommy_name1 && mum_name.toLowerCase() !== mommy_name2 || mum_name.toLowerCase() !== mommy_name3) {
+            } else if (mum_name.toLowerCase() !== mommy_name1 && mum_name.toLowerCase() !== mommy_name2 && mum_name.toLowerCase() !== mommy_name3) {
+                console.log('mum name corret')
                 setfailureNotification(true);
                 setfailureNotification_msg("hmm... Mommy's name?");
-            } else if (getDate !== getBirthday1 || getDate !== getBirthday2) {
+            } else if (getDate !== getBirthday1 && getDate !== getBirthday2) {
+                console.log('birthday correct')
                 setfailureNotification(true);
                 setfailureNotification_msg('Ahm... guess ?');
             } else {
