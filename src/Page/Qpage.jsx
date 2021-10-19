@@ -70,7 +70,7 @@ getDefaultLocale
                 setfailureNotification_msg("hmm... Daddy's name?");
 
                 // console.log('now push to private page')
-            } else if (mum_name.toLowerCase() !== mommy_name1 && mum_name.toLowerCase() !== mommy_name2 || mum_name.toLowerCase() !== mommy_name1) {
+            } else if (mum_name.toLowerCase() !== mommy_name1 && mum_name.toLowerCase() !== mommy_name2 || mum_name.toLowerCase() !== mommy_name3) {
                 setfailureNotification(true);
                 setfailureNotification_msg("hmm... Mommy's name?");
             } else if (getDate !== getBirthday1 || getDate !== getBirthday2) {
@@ -117,7 +117,7 @@ getDefaultLocale
                                 type="text"
                                 name="dad_name"
                                 id="dad_name"
-                                value={dad_name.toLowerCase() === daddy_name ? dad_name + ' is ' + 'Correct!' : dad_name}
+                                value={dad_name.toLowerCase() === daddy_name1 || dad_name.toLowerCase() === daddy_name2? dad_name + ' is ' + 'Correct!' : dad_name}
                                 onChange={(e) => enter_dad_name(e.target.value)}
                             />
                             <div className="w-full my-1">What's my mommy's name ?</div>
@@ -126,7 +126,7 @@ getDefaultLocale
                                 type="text"
                                 name="mum_name"
                                 id="mum_name"
-                                value={mum_name.toLowerCase() === mommy_name1 || mum_name.toLowerCase() === mommy_name2 ? mum_name + ' is ' + 'Correct!' : mum_name}
+                                value={mum_name.toLowerCase() === mommy_name1 || mum_name.toLowerCase() === mommy_name2 || mum_name.toLowerCase() === mommy_name3? mum_name + ' is ' + 'Correct!' : mum_name}
                                 onChange={(e) => enter_mum_name(e.target.value)}
                             />
                             <div className="w-full my-1">What's my birthday ?</div>
