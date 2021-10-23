@@ -2,42 +2,33 @@ import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Layout from '../component/Background';
-import DatePicker,{registerLocale, getDefaultLocale } from 'react-datepicker';
+import DatePicker from 'react-datepicker';
 import { createPopper } from '@popperjs/core';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaw } from '@fortawesome/free-solid-svg-icons'
 import kuma_logo from '../img/kuma-logo.png';
 
+const Daddy_name = ["brandon", "chunk", "cooper"]
+const Mommy_name = ["amy", "amiee"]
+
 const Qpage = (props) => {
     let history = useHistory();
-getDefaultLocale
-    const daddy_name1 = 'brandon';
-    const daddy_name2 = "chunk";
-    const mommy_name1 = 'amy';
-    const mommy_name2 = 'amiee';
-    const mommy_name3 = "chunk's wife"
-    const birthday1 = new Date('2021-11-12');
-    const birthday2 = new Date('2021-11-19');
+    const birthday = new Date('2021-11-12');
     const { verify } = props;
-    const [isAutheticated, setisAutheticated] = useState(false);
-    const [date, setDate] = useState("");
-
-
-    const [failureNotification, setfailureNotification] = useState(true);
+    // const [isAutheticated, setisAutheticated] = useState(false);
+    const [failureNotification] = useState(true);
     const [failureNotification_msg, setfailureNotification_msg] = useState("Intimacy Questions");
-
     const [dad_name, enter_dad_name] = useState('');
     const [mum_name, enter_mum_name] = useState('');
-    console.log(dad_name);
-    console.log(mum_name);
-   
-      console.log(date)
-    //   console.log(birthday)
-    //   console.log(date.toString().substring(0, 15));
-    // console.log(birthday.toString().substring(0, 15));
+    const [date, setDate] = useState("");
+    const daddy_name_match = () =>{
+        return Daddy_name.includes(dad_name.toLowerCase())
+    }
+    const mommy_name_match = () =>{
+        return Mommy_name.includes(mum_name.toLowerCase())
+    }
 
-    
     const color = 'black';
     //   const isAuthenticated = localStorage.getItem("isAuthenticated");
     const [dropdownPopoverShow, setDropdownPopoverShow] = useState(false);
@@ -56,37 +47,22 @@ getDefaultLocale
     let bgColor;
     color === 'white' ? (bgColor = 'bg-blueGray-700') : (bgColor = 'bg-' + color + '-500');
     const getDate = date.toString().substring(0, 11)
-    const getBirthday1 =birthday1.toString().substring(0, 11)
-    const getBirthday2 =birthday2.toString().substring(0, 11)
+    const getBirthday =birthday.toString().substring(0, 11)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // const response = await axios.post(serverURL + '/login',user,{withCredentials:true});
-            localStorage.clear();
-            console.log(dad_name.toLowerCase());
-            console.log(daddy_name1)
-            console.log(daddy_name2)
-            if (dad_name.toLowerCase() !== daddy_name1 && dad_name.toLowerCase() !== daddy_name2) {
+            if (!daddy_name_match()) {
                 console.log('dad name wrong')
-                setfailureNotification(true);
                 setfailureNotification_msg("hmm... Daddy's name?");
-
-                // console.log('now push to private page')
-            } else if (mum_name.toLowerCase() !== mommy_name1 && mum_name.toLowerCase() !== mommy_name2 && mum_name.toLowerCase() !== mommy_name3) {
+            } else if (!mommy_name_match()){
                 console.log('mum name corret')
-                setfailureNotification(true);
                 setfailureNotification_msg("hmm... Mommy's name?");
-            } else if (getDate !== getBirthday1 && getDate !== getBirthday2) {
+            } else if (getDate !== getBirthday) {
                 console.log('birthday correct')
-                setfailureNotification(true);
                 setfailureNotification_msg('Ahm... guess ?');
             } else {
-                // setisAutheticated(true);
                 verify(true);
-
-                // console.log('user logged in :', isAutheticated)
-
                 history.push('/welcome');
             }
         } catch (err) {
@@ -115,14 +91,14 @@ getDefaultLocale
                         <form 
                          ref={popoverDropdownRef}
                         className={(dropdownPopoverShow ? 'block ' : 'hidden ') +"Q-form w-full absolute"} onSubmit={handleSubmit}>
-                            {failureNotification ? <div className="text-center text-2xl my-2">{failureNotification_msg}</div> : null}
+                        <div className="text-center text-2xl my-2">{failureNotification_msg}</div>
                             <div className="w-full my-1">What's my daddy's name ?</div>
                             <input
                                 className="w-full my-1 rounded-lg"
                                 type="text"
                                 name="dad_name"
                                 id="dad_name"
-                                value={dad_name.toLowerCase() === daddy_name1 || dad_name.toLowerCase() === daddy_name2? dad_name + ' is ' + 'Correct!' : dad_name}
+                                value={daddy_name_match()? dad_name + ' is ' + 'Correct!' : dad_name}
                                 onChange={(e) => enter_dad_name(e.target.value)}
                             />
                             <div className="w-full my-1">What's my mommy's name ?</div>
@@ -131,7 +107,7 @@ getDefaultLocale
                                 type="text"
                                 name="mum_name"
                                 id="mum_name"
-                                value={mum_name.toLowerCase() === mommy_name1 || mum_name.toLowerCase() === mommy_name2 || mum_name.toLowerCase() === mommy_name3? mum_name + ' is ' + 'Correct!' : mum_name}
+                                value={mommy_name_match()? mum_name + ' is ' + 'Correct!' : mum_name}
                                 onChange={(e) => enter_mum_name(e.target.value)}
                             />
                             <div className="w-full my-1">What's my birthday ?</div>
@@ -146,8 +122,6 @@ getDefaultLocale
                             </div>
                         </form>
                     </div>
-
-                {/* </div> */}
             </div>
         </>
     );
