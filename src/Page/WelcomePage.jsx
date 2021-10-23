@@ -38,12 +38,10 @@ const WelcomePage = () => {
                         <Link to="/albums">Albums</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/subscribe">Subscribe</Link>
-
                         </div>
                     </div>
                     <div className="body-container w-full h-full relative grid grid-rows-2">
                         <Countdown date={new Date('2021/11/12 11:00')} renderer={CountdownTimer} />
-
                         <div className="greeting  self-center countdown-title text-3xl ">
                             <div>
                                 <p className="text-lg lg:text-3xl self-start ">I'm looking forward to see ya... mate !</p>
