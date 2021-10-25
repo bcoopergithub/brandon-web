@@ -7,7 +7,6 @@ const Layout = ({ children }) => {
         <>
                   <div style={{ backgroundImage: `url(${background_desktop})`,zIndex:'-1' }} className="w-full h-full bg-no-repeat bg-cover bg-right invisible sm:visible  absolute"></div>
             <div style={{ backgroundImage: `url(${background_mobile})`,zIndex:'-1'  }} className="w-full h-full bg-no-repeat bg-cover bg-right visible sm:invisible absolute ">
-           
             </div>
         </>
 

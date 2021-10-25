@@ -112,22 +112,3 @@ const Qpage = (props) => {
 };
 
 export default Qpage;
-
-
-         {/* <input
-                            className="w-full my-1 rounded-lg"
-                            type="text"
-                            name="dad_name"
-                            id="dad_name"
-                            value={daddy_name_match() ? dad_name + ' is ' + 'Correct!' : dad_name}
-                            onChange={(e) => enter_dad_name(e.target.value)}
-                        /> */}
-                     
-                        {/* <input
-                            className="w-full my-1 rounded-lg"
-                            type="text"
-                            name="mum_name"
-                            id="mum_name"
-                            value={mummy_name_match() ? mum_name + ' is ' + 'Correct!' : mum_name}
-                            onChange={(e) => enter_mum_name(e.target.value)}
-                        /> */}
