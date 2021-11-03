@@ -3,7 +3,7 @@ import React from 'react';
 const Overlay = ({ children }) => {
     return (
         <>
-            <div className="w-screen h-auto bg-black bg-opacity-90 bg-no-repeat absolute">
+            <div className="w-screen min-h-full h-auto bg-black bg-opacity-80 bg-no-repeat absolute">
                 {children}
             </div>
         </>

@@ -58,13 +58,13 @@ function Journey(props) {
    <>
    <Overlay>
    <Layout></Layout>
-   <div className="container mx-auto">
+   <div className="px-28 mx-auto text-center">
    <InfiniteScroll
   dataLength={images.length} //This is important field to render the next data
   next={fetchNext}
   hasMore={true}
-  loader={<h1>Loading...</h1>}
-  className="grid grid-cols-4 gap-4">
+  loader={<p className ="text-8xl" >Loading...</p>}
+  className="grid grid-cols-4 gap-4 text-center">
 
         {images.map(image=>(
         <ImageCard key={image.id} image={image} />
