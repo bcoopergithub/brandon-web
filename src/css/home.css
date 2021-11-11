@@ -15,7 +15,8 @@ border:20px solid #6C552A,
 }
 
 .enter-button:hover{
-    background-color:#7D622F
+    background-color:#7D622F;
+    
 
 }
 .entire-content{
@@ -97,4 +98,10 @@ span{
 .greeting {
     font-weight:800;
     color:#292314
+}
+
+
+.loading {
+    color:white;
+    letter-spacing:10px
 }

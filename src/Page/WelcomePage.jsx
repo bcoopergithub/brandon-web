@@ -15,7 +15,7 @@ const WelcomePage = () => {
 
     // Create the count state.
     const [count, setCount] = useState(0);
-    const Completionist = () => <span>You are good to go!</span>;
+    const Completionist = () => <h1>Little Brandon is Born !</h1>;
 
     // const date = new Date('2022/06/22 18:00');
     // Update the count (+1 every second).

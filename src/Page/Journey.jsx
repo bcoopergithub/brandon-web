@@ -63,12 +63,13 @@ function Journey(props) {
   dataLength={images.length} //This is important field to render the next data
   next={fetchNext}
   hasMore={true}
-  loader={<p className ="text-8xl" >Loading...</p>}
-  className="grid grid-cols-4 gap-4 text-center">
-
+  loader={<p className ="loading text-8xl" >Loading...</p>}
+  className="loading text-center">
+<div className="grid grid-cols-4 gap-4">
         {images.map(image=>(
         <ImageCard key={image.id} image={image} />
         ))}
+        </div>
      </InfiniteScroll>
   </div>
   </Overlay>
