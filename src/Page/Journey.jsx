@@ -14,12 +14,12 @@ function Journey(props) {
     const fetchImages = async () => {
       const a = "photos"
         console.log('api key', REACT_APP_UNSPLASH_API);
-        const apiRoot = `https://api.unsplash.com/${a}?page=${page_number}`;
+        const apiRoot = `https://api.unsplash.com/${a}?client_id=kNUvQVzWIhv7EFvV5KAkfGVvYqOArGj0K0hc67VAAJk&page=${page_number}`;
         const res = await axios
             .get(`${apiRoot}`, {
                 headers: {
-                  Authorization: "Client-ID kNUvQVzWIhv7EFvV5KAkfGVvYqOArGj0K0hc67VAAJk" ,
-                    "Accept-Version": "v1"
+                  // Authorization: "Client-ID kNUvQVzWIhv7EFvV5KAkfGVvYqOArGj0K0hc67VAAJk" ,
+                    // "Accept-Version": "v1"
                 },
             })
             .then((res) => {
