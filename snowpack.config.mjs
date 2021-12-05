@@ -1,5 +1,5 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
-process.env.REACT_APP_UNSPLASH_API = 'kNUvQVzWIhv7EFvV5KAkfGVvYqOArGj0K0hc67VAAJk';
+// process.env.REACT_APP_UNSPLASH_API = 'kNUvQVzWIhv7EFvV5KAkfGVvYqOArGj0K0hc67VAAJk';
 export default {
     mount: {
         // directory name: 'build directory'
@@ -29,7 +29,7 @@ export default {
     buildOptions: {
         /* ... */
     },
-    env: {
-        REACT_APP_UNSPLASH_API: 'kNUvQVzWIhv7EFvV5KAkfGVvYqOArGj0K0hc67VAAJk',
-    },
+    // env: {
+    //     REACT_APP_UNSPLASH_API: 'kNUvQVzWIhv7EFvV5KAkfGVvYqOArGj0K0hc67VAAJk',
+    // },
 };

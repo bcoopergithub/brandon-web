@@ -8,12 +8,12 @@ import { faImages } from '@fortawesome/free-solid-svg-icons';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 function Journey(props) {
-    const { REACT_APP_UNSPLASH_API } = __SNOWPACK_ENV__;
+    // const { REACT_APP_UNSPLASH_API } = __SNOWPACK_ENV__;
     const [images, set_images] = useState([]);
     const [page_number, set_page_number] = useState(1);
     const fetchImages = async () => {
       const a = "photos"
-        console.log('api key', REACT_APP_UNSPLASH_API);
+        // console.log('api key', REACT_APP_UNSPLASH_API);
         const apiRoot = `https://api.unsplash.com/${a}?client_id=kNUvQVzWIhv7EFvV5KAkfGVvYqOArGj0K0hc67VAAJk&page=${page_number}`;
         const res = await axios
             .get(`${apiRoot}`, {
