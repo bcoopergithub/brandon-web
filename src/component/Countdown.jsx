@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 
+
 const CountdownTimer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
+        const Completionist = () => <h1>Little Brandon is Born !</h1>;
         // Render a complete state
         return <Completionist />;
     } else {
